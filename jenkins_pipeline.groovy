@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Build and test') {
             steps {
                 // Get some code from a GitHub repository
                 git 'ssh://git@git.wellcentive.com:7999/mt/tanya-test.git'
