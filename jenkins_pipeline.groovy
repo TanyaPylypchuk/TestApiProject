@@ -10,7 +10,7 @@ pipeline {
         stage('Build and test') {
             steps {
                 // Get some code from a GitHub repository
-                git 'ssh://git@git.wellcentive.com:7999/mt/tanya-test.git'
+                git 'ssh://git@github.com:7999/TanyaPylypchuk/TestApiProject.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
