@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    triggers { cron('H */4 * * 1-5') }
+parameters{
+    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+}
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "Tanya_maven_3.6.0"
