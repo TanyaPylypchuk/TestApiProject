@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    triggers { cron('H */4 * * 1-5') }
+    triggers { cron('@daily') }
 parameters{
     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 }
