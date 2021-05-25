@@ -11,7 +11,7 @@ public class ResponseCodeTest {
     public void testResponseCode() {
 
                 when().
-                get(" http://ip.jsontest.com/").
+                get(System.getProperty("BASE_URL", "http://localhost:8099")).
                 then().
                 assertThat().
                 statusCode(200);
