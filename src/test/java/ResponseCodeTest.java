@@ -9,8 +9,12 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 public class ResponseCodeTest {
     @Test
     public void testResponseCode() {
+        String s= System.getProperty("BASE_URL");
+        String k= System.getenv("BASE_URL");
+          System.out.println("PROPERTY: " + s);
+         System.out.println("ENV: " + k);
                 when().
-                get("http://chupil.com:8099").
+                get(s).
                 then().
                 assertThat().
                 statusCode(200);
