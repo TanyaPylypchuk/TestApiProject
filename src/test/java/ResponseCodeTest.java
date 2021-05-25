@@ -9,9 +9,11 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 public class ResponseCodeTest {
     @Test
     public void testResponseCode() {
+        String url = System.getProperty("BASE_URL", "http://localhost:8099");
+        System.out.println("WE ARE HERE: " + url);
 
                 when().
-                get(System.getProperty("BASE_URL", "http://localhost:8099")).
+                get(url).
                 then().
                 assertThat().
                 statusCode(200);
