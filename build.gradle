@@ -140,3 +140,6 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version:'4.11'
     testCompile 'io.rest-assured:rest-assured:3.0.2'
 }
+test {
+    systemProperties System.getProperties()
+}
